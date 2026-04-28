@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Police moderne -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff; /* fond blanc */
+      color: #facc15; /* texte noir */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    img.logo {
+      width: 110px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    p {
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    /* Loader jaune */
+    .loader {
+      margin: 30px auto;
+      border: 4px solid rgba(0,0,0,0.1);
+      border-top: 4px solid #9b1919; /* jaune */
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <script>
+    // 👉 Mets ton lien ici
+    const redirectUrl = "/";
+
+    // Redirection après 2 secondes
+    setTimeout(() => {
+      window.location.href = redirectUrl;
+    }, 2000);
+  </script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 👉 Ton logo -->
+    <img src="data:image/png;base64,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" alt="Logo" class="logo">
+
+    <h1>DHL Express</h1>
+    <p>Veuillez patienter quelques secondes</p>
+
+    <div class="loader"></div>
+
+  </div>
+</body>
+</html>
